@@ -1,0 +1,31 @@
+spring:
+  banner:
+    location: \banner.txt
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/heybadminton?useUnicode=true&characterEncoding=UTF-8&serverTimezone=US/Eastern
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: laphi
+    password: laphicet@2023
+  redis:
+    host: 3.83.126.203
+    port: 6379
+    password: laphicet@2023
+    database: 0
+    lettuce:
+      pool:
+        max-idle: 16
+        max-active: 32
+        min-idle: 8
+
+mybatis:
+  # 实体类别名---包路径
+  type-aliases-package: com.heybadminton.entity
+  # 映射文件位置
+  mapper-locations: classpath*:**/mapper/*Mapper.xml
+  configuration:
+    # 使用日志打印 SQL 语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+upload_images:
+  path: D:\CSCI_6234_Group_9\heybadminton\front\public\upload_images

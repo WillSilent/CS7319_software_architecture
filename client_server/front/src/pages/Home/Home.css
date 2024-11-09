@@ -1,0 +1,10 @@
+.home-wrapper {
+  padding: 0px 50px;
+  width: 70%;
+  margin: auto;
+}
+
+.Divider {
+  border-bottom: 2px solid #000; /* increase thickness and change color */
+  margin-bottom: 20px; /* add margin to create more space */
+}

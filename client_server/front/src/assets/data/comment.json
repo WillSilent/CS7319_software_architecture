@@ -1,0 +1,20 @@
+[
+	{
+		"id" : 1,
+		"postId" : 1,
+		"commentUserId" : null,
+		"content" : "Wonderful Post!",
+		"createTime" : "2023-05-31 02:00:51",
+		"isDelete" : 0,
+		"postUserProfile" : "/upload_images/cat1-1681697583033.jpg"
+	},
+	{
+		"id" : 2,
+		"postId" : 1,
+		"commentUserId" : null,
+		"content" : "Thank you for your advice.",
+		"createTime" : "2023-05-31 02:00:51",
+		"isDelete" : 0,
+		"postUserProfile" : "/upload_images/cat2-1681726655723.jpg"
+	}
+]

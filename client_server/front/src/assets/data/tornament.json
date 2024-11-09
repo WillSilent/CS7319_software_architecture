@@ -1,0 +1,35 @@
+[
+	{
+		"id" : 1,
+		"headerUrl" : "https://bwfworldchampionships.bwfbadminton.com/wp-content/plugins/bwf-menu-system/images/logo-wch-mobile-09.png",
+		"title" : "BWF World Championships",
+		"detail" : "The BWF World Championships is the most prestigious tournament in badminton, featuring the world's best players competing for the title of world champion in five disciplines.",
+		"location" : "Tokyo, Japan",
+		"date" : "August 21-27, 2023",
+		"registerLink" : "https://development.bwfbadminton.com/",
+		"carouseImageUrl" : "https://bwfworldchampionships.bwfbadminton.com/wp-content/uploads/sites/8/2022/09/WC2023_Digital_WC-Site_1024x481_3.jpg",
+		"createTime" : "2023-05-31 02:00:51"
+	},
+	{
+		"id" : 2,
+		"headerUrl" : "https://www.allenglandbadminton.com/wp-content/uploads/2021/09/All-England-Badminton.png",
+		"title" : "YONEX All England Open",
+		"detail" : "The YONEX All England Open is one of the oldest and most prestigious badminton tournaments in the world, part of the BWF World Tour, and considered one of the five most prestigious events in the tour.",
+		"location" : "Birmingham, England",
+		"date" : "March 14-19, 2023",
+		"registerLink" : "https://www.allenglandbadminton.com/",
+		"carouseImageUrl" : "https://bwfworldtour.bwfbadminton.com/wp-content/uploads/sites/11/2019/11/wt_banner_oct2019.jpg",
+		"createTime" : "2023-05-31 02:00:51"
+	},
+	{
+		"id" : 3,
+		"headerUrl" : "https://extranet.bwf.sport/docs/events/4708/logo-colour/TotalEnergies_BWF_Sudirman%20Cup_2023.svg",
+		"title" : "TOTAL BWF Sudirman Cup",
+		"detail" : "The TOTAL BWF Sudirman Cup is a mixed team badminton championship held every two years. It features teams from different countries competing in a knockout format tournament, named after Dick Sudirman, a former Indonesian badminton player and coach.",
+		"location" : "Suzhou, China",
+		"date" : "May 14-21, 2023",
+		"registerLink" : "https://bwfsudirmancup.bwfbadminton.com/",
+		"carouseImageUrl" : "https://www.badmintoneurope.tv/image/800/450/bb063c4b-886e-4e98-8ded-eaa104b803d6.png",
+		"createTime" : "2023-05-31 02:00:51"
+	}
+]
