@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heybadminton.dao.UserMapper">
+
+    <select id="selectAllUsers" resultType="com.heybadminton.entity.User">
+        select id, username, email, password, is_admin as isAdmin
+        from sys_user;
+    </select>
+
+    <select id="getUserByUserName" parameterType="java.lang.String" resultType="com.heybadminton.entity.User">
+        select id, username, email, password, is_admin as isAdmin
+        from sys_user
+        where username = #{username};
+    </select>
+
+    <insert id="insertUser" parameterType="com.heybadminton.entity.User">
+        insert into sys_user (profile, email, username, password, introduction) values (#{profile}, #{email}, #{username}, #{password}, #{introduction})
+    </insert>
+
+    <select id="searchUserById" parameterType="java.lang.Long" resultType="com.heybadminton.entity.User">
+        select id, profile, introduction, username, email, is_admin as isAdmin
+        from sys_user
+        where id = #{userId};
+    </select>
+</mapper>

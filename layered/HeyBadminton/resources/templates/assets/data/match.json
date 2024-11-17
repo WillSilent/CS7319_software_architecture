@@ -1,0 +1,44 @@
+[
+	{
+		"id" : 1,
+		"title" : "Amateur Badminton Tournament",
+		"time" : "10:00am",
+		"date" : "2023-04-21",
+		"location" : "Boston Badminton, Westborough, MA",
+		"postUserId" : null,
+		"note" : "Come join us for our first amateur badminton tournament at The Courtside Club in Westborough, MA on April 21st at 1:00pm. Put your skills to the test, meet new players, and have a chance to win prizes!",
+		"participants" : 14,
+		"max_participants" : 16,
+		"closed" : 0,
+		"create_time" : "2023-05-31 02:00:51",
+		"is_delete" : 0
+	},
+	{
+		"id" : 2,
+		"title" : "Weekend Badminton Social",
+		"time" : "1:00pm",
+		"date" : "2023-05-13",
+		"location" : "Atlanta Badminton Club, Norcross, GA",
+		"postUserId" : null,
+		"note" : "Join us for a fun and social badminton morning at the Atlanta Badminton Club in Norcross, GA on May 13th at 10:00am. We'll be playing doubles matches and enjoying some snacks and refreshments afterwards. All skill levels welcome!",
+		"participants" : 8,
+		"max_participants" : 10,
+		"closed" : 0,
+		"create_time" : "2023-05-31 02:00:51",
+		"is_delete" : 0
+	},
+	{
+		"id" : 3,
+		"title" : "Beginner's Badminton Workshop",
+		"time" : "7:00pm",
+		"date" : "2023-06-01",
+		"location" : "Badminton Alley, El Monte, CA",
+		"postUserId" : null,
+		"note" : "Learn the basics of badminton and improve your game at our beginner's workshop at Badminton Alley in El Monte, CA on June 1st at 7:00pm. Our experienced coaches will guide you through the fundamentals of badminton, from grip and footwork to serves and clears. Rackets provided.",
+		"participants" : 10,
+		"max_participants" : 12,
+		"closed" : 0,
+		"create_time" : "2023-05-31 02:00:51",
+		"is_delete" : 0
+	}
+]
