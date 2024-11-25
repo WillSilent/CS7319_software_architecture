@@ -1,69 +1,84 @@
-# CS7319 Software Architecture Design Group-6
-Compilation and Implementation Platform
-	•	Compilation Platform: Developed using [compiler/IDE, e.g., IntelliJ IDEA/VsCode].
-	•	Implementation Platform: Java Spring Boot 3.3.5.
-	•	Runtime Environment: JDK 21
+# CS7319 Software Architecture Design Group-8
+### Project Overview
 
-	Installation and Configuration:
-	1.	Install JDK and Maven.
-	2.	Clone the project repository using: git clone <your-repo-url>.
-	3.	Import the project into an IDE and wait for Maven to resolve dependencies.
-	Installation and Configuration:
-	1.	Install JDK and Maven.
-	2.	Clone the project repository using: git clone <your-repo-url>.
-	3.	Import the project into an IDE and wait for Maven to resolve dependencies.
-  4.  Your can use IDEA or VSCode tools to open it.
-  5.  The system will be accessible at 127.0.0.1:8000
-Comparison of Architectural Designs and Rationale for Final Selection
-  In this project, we evaluated and compared two architectural designs: Layered Architecture and Client-Server (CS)        Architecture. Below are the details of the comparison and the rationale for the final selection.
+#### 1. Overview
 
-    Client-Server (CS) Architecture
+Our vision for this project is to build a vibrant online community for badminton fans of all skill levels. We aim to create a platform that fosters connections, provides valuable resources, and promotes the growth of badminton as a sport.
 
-	1.	Characteristics:
-	•	The client handles sending requests, and the server processes them and returns responses.
-	•	A simple two-tier structure that involves direct communication between client and server.
-	2.	Advantages:
-	•	Simplicity: Easier and faster to develop and deploy.
-	•	Better Performance: Direct communication between client and server reduces overhead.
-	•	Flexibility: Clients or servers can be extended independently.
-	3.	Disadvantages:
-	•	Lower Maintainability: Tighter coupling between client and server.
-	•	Limited Scalability: Managing complex business logic becomes harder in this architecture.
-	•	Security Risks: Directly exposed client-server communication can introduce vulnerabilities.
-	4.	Use Cases:
-	•	Suitable for simple applications or rapid development scenarios, such as lightweight web services or data-processing systems.
+Players can share their knowledge, passion, and experiences through this platform, making it easier for everyone to engage with and enjoy badminton.
 
- Layered Architecture
+Our ultimate goal is to deliver a seamless and enjoyable experience for all users, whether they are searching for playing partners, buying or selling sports equipment, or seeking to learn more about the game.
 
-	1.	Characteristics:
-	•	The system is divided into multiple layers (e.g., Presentation Layer, Business Logic Layer, Data Access Layer).
-	•	Each layer has a specific responsibility and interacts with other layers via defined interfaces or methods.
-	•	Highly maintainable and extensible, making it suitable for complex applications.
-	2.	Advantages:
-	•	High Modularity: Each layer has a clear responsibility, making maintenance and testing easier.
-	•	Team Collaboration: Developers can focus on individual layers without interfering with other layers.
-	•	Ease of Extension and Modification: Adding new features typically requires changes in specific layers only.
-	3.	Disadvantages:
-	•	Performance Overhead: Calls between layers can add latency to system responses.
-	•	Longer Development Time: Due to its complexity, development might take longer.
-	4.	Use Cases:
-	•	Best suited for large, complex applications that require long-term maintenance and scalability.
 
-Final Selection
-We chose Client-Server Architecture for the following reasons:
-	1.	Simplicity:
-	•	The Client-Server architecture is easier and faster to implement, which aligns with the project’s timeline and resource constraints.
-	2.	Performance:
-	•	The direct interaction between the client and server ensures better performance for this project, which does not require extensive business logic or modularity.
-	3.	Suitability for Requirements:
-	•	The project’s scope involves straightforward operations (e.g., basic user interactions, fetching court information, managing tournaments) that can be efficiently handled using the Client-Server model.
-	4.	Reduced Overhead:
-	•	Unlike the Layered Architecture, the CS framework avoids additional overhead caused by layer-to-layer communication, ensuring quicker response times for users.
-	5.	Future Flexibility:
-	•	Although the CS architecture may have limitations for complex systems, it is sufficient for the current project. Future enhancements or transitions to a more modular framework (e.g., Layered Architecture) can be planned as the system evolves.
 
-5. Additional Notes
+#### 2. Implementation 
 
-	•	For more complex business needs in the future, the system can be refactored to adopt a more modular architecture like Layered Architecture.
-	•	UML diagrams, including class diagrams and deployment diagrams, are provided in docs/architecture-diagrams.pdf.
- 
+Although we have two architectures, we use similar implementation tech.
+
+- Program language: Java + JavaScript
+- Framework: Springboot + SpringCloud(eruka) + React
+- compiler/IDE:  IntelliJ IDEA/VsCode
+- build tools: maven, Lombok
+
+#### 3. Website functionality:
+
+- Badminton-related information: tournaments, rules, etc
+- Post second-hand sports equipment
+- Find a courtmate: create/join a match
+- Display nearby court information
+
+#### 4. Option1 - Layered Layer Architecture
+
+![Snipaste_2024-11-25_12-49-18](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_12-49-18.png)
+
+- Evaluation:
+  - Pros
+    - Clear Structure: Each layer has a defined role, making the code easier to organize and manage.​
+    - Low Coupling: Changes in one layer don’t impact others, improving flexibility and maintainability.​
+    - Better Testing: Each layer can be tested individually, making finding and fixing issues easier.​
+    - Code Reusability: Layers like Data Access can be reused across different system parts.​
+    - Scalability: Layers can be swapped or updated independently, supporting system growth.​
+  - Cons
+    - **Complexity for Small Projects**: Layered architecture can add unnecessary complexity to small projects.
+    - **Performance Costs**: Communication between layers can slow the system, affecting performance.
+    - **Less Flexibility for Fast Changes**: The structure can be limiting in projects needing rapid updates.
+    - **Redundant Code**: Separate layers may create extra code, making simple tasks more complex.
+
+#### 5. Option2 - Client-Server Architecture
+
+![Snipaste_2024-11-25_12-52-02](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_12-52-02.png)
+
+- Evaluation
+  - pros:
+    - Client and server components can be improved separately, which is **easier to** **maintain** new features**.**
+    - **RPC-based connectors,** standard data format(JSON) makes it easier for data delivery.
+    - The server can handle multiple client **concurrently**, and the server can **scale up** to deal with the traffic when users increasing.
+    - **Centralized data control** improve the **security** of the system, easily add data control method to improve the system's data protection.
+  - cons:
+    - The Centralized server may cause lower the **reliability** of the website, once the server crash down, users may not access the website.
+    - Highly relying on the internet may lower the **performance** of the system when users are in a low data mode, causing the latency or the inaccessibility of the website.
+    - The server may become the **bottleneck** when concurrent users increase.
+
+#### 6. Final Selection
+
+We finally choose the **Client-Server** architecture.
+
+- **For functional perspective:**
+  - The platform is built for communication and social networking, which naturally fits into the client-server model.
+
+- **For non-functional perspective:**
+
+  - **Scalability:** The client-server model can be easily scaled to handle growing user traffic in the future, by using load balancers, caching, and database replication.
+
+  - **Maintenance**: With a centralized server, updates and bug fixes can be rolled out more efficiently without requiring changes on the client side.
+
+#### 7. Risk Analysis
+
+- LAE - Project Goals: providing a communication platform that is stable, efficient and easy-to-use.
+  - ![Snipaste_2024-11-25_12-55-26](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_12-55-26.png)
+- **Pressure Testing**
+  - With the user number grows, the response time and the error percentages both increase in most situation.
+  - Platform performs well when number of users is below 2000. Although the respond time increase, all requests are successful.
+  - While when users number reaches 3000 per second, the platform has problems in both performance and availability.
+  - ![Snipaste_2024-11-25_12-56-31](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_12-56-31.png)
+
