@@ -2,7 +2,7 @@
 
 #### 1. Overview
 
-![Snipaste_2024-11-25_12-52-02](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_12-52-02.png)
+![Snipaste_2024-11-25_12-52-02](..\images\Snipaste_2024-11-25_12-52-02.png)
 
 In this architecture, we redesigned the classic layered architecture and applied the client-server architecture. Our improvements are mainly reflected in the following two aspects:
 
@@ -67,15 +67,15 @@ Note: each project has a startup sequence: register -> back ->  load balancer ->
 
 ### 3. Main code structure
 
-**Front UI :** ![image-20241125133109976](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\image-20241125133109976.png)
+**Front UI :** ![image-20241125133109976](..\images\image-20241125133109976.png)
 
-**Registeration-Center:** ![image-20241125133014944](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\image-20241125133014944.png)
+**Registeration-Center:** ![image-20241125133014944](..\images\image-20241125133014944.png)
 
-**Load-balancer:** ![image-20241125133334313](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\image-20241125133334313.png)
+**Load-balancer:** ![image-20241125133334313](..\images\image-20241125133334313.png)
 
 
 
-**Back Service:** ![Snipaste_2024-11-25_13-32-26](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_13-32-26.png)
+**Back Service:** ![Snipaste_2024-11-25_13-32-26](..\images\Snipaste_2024-11-25_13-32-26.png)
 
 
 
@@ -86,5 +86,5 @@ The class diagram mainly focus on the loadbalancer part, since we reuse most of 
 The load balancer contains multiple service components, such as LoginInterceptor, AuthService... do the user login precheck,
 Each service, For example, AuthService handles user authentication, and MatchService handles querying and updating match data., in this part it will use the resttemplate to do a rpc to our server cluster, our customer loadbalancer will distribute the rpc to different server.
 
-![Snipaste_2024-11-25_13-15-24](C:\Users\MistS\OneDrive\Desktop\gitcode\CS7319_software_architecture\images\Snipaste_2024-11-25_13-15-24.png)
+![Snipaste_2024-11-25_13-15-24](..\images\Snipaste_2024-11-25_13-15-24.png)
 
