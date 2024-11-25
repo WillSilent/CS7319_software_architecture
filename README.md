@@ -46,7 +46,7 @@ Although we have two architectures, we use similar implementation tech.
 
 #### 5. Option2 - Client-Server Architecture
 
-![Snipaste_2024-11-25_12-52-02](\images\Snipaste_2024-11-25_12-52-02.png)
+![Snipaste_2024-11-25_12-52-02](./images/Snipaste_2024-11-25_12-52-02.png)
 
 - Evaluation
   - pros:
@@ -75,10 +75,10 @@ We finally choose the **Client-Server** architecture.
 #### 7. Risk Analysis
 
 - LAE - Project Goals: providing a communication platform that is stable, efficient and easy-to-use.
-  - ![Snipaste_2024-11-25_12-55-26](\images\Snipaste_2024-11-25_12-55-26.png)
+  - ![Snipaste_2024-11-25_12-55-26](./images/Snipaste_2024-11-25_12-55-26.png)
 - **Pressure Testing**
   - With the user number grows, the response time and the error percentages both increase in most situation.
   - Platform performs well when number of users is below 2000. Although the respond time increase, all requests are successful.
   - While when users number reaches 3000 per second, the platform has problems in both performance and availability.
-  - ![Snipaste_2024-11-25_12-56-31](\images\Snipaste_2024-11-25_12-56-31.png)
+  - ![Snipaste_2024-11-25_12-56-31](./images/Snipaste_2024-11-25_12-56-31.png)
 
