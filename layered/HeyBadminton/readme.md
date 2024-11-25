@@ -2,7 +2,7 @@
 
 #### 1. Overview
 
-![](..\..\images\Snipaste_2024-11-25_12-49-18.png)
+![](../../images/Snipaste_2024-11-25_12-49-18.png)
 
 In layered layer architecture, we sperate the project into different layers and each layer represents different responsibilities.
 
@@ -27,9 +27,9 @@ Installation and Configuration:
 
 Main code structure as follow:
 
-![image-20241125130707570](..\..\images\image-20241125130707570.png)
+![image-20241125130707570](../../images/image-20241125130707570.png)
 
 UML class Diagram:
 
-![image-20241125131254174](..\..\images\image-20241125131254174.png)
+![image-20241125131254174](../../images/image-20241125131254174.png)
 
