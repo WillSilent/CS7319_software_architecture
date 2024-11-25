@@ -32,6 +32,7 @@ public class EquipmentController {
 
     @PostMapping("/add")
     public int addEquipment(@RequestBody Equipment equipment) {
+        System.out.println(equipment);
         return equipmentService.addEquipment(equipment);
     }
 

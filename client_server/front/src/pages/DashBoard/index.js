@@ -17,44 +17,44 @@ const DashBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
 
-  // useEffect(() => {
-  //   async function getUser() {
-  //     // console.log("login")
-  //     // if (await getToken() === '') {
-
-  //     //   setIsModalOpen(true)
-  //     //   setModalContent("Please Login first!")
-  //     //   return
-  //     // }
-
-  //     const result = await http.get("/auth/getUserInfo", {
-  //       headers: { Authorization: "Bearer " + getToken() },
-  //     });
-  //     if (result.data.code === 90001) {
-  //       //token过期了，重新登录
-  //       setIsModalOpen(true);
-  //       setModalContent("Please Login first!");
-  //       return;
-  //     }
-  //     setUser(result.data.data);
-  //   }
-  //   // 一直尝试获取当前登录用户，如果 token 过期，需重新登录
-  //   getUser();
-  // }, []);
   useEffect(() => {
-    function getUser() {
-      if (getToken() === null) {
+    async function getUser() {
+      // console.log("login")
+      // if (await getToken() === '') {
+
+      //   setIsModalOpen(true)
+      //   setModalContent("Please Login first!")
+      //   return
+      // }
+
+      const result = await http.get("/auth/getUserInfo", {
+        headers: { Authorization: "Bearer " + getToken() },
+      });
+      if (result.data.code === 90001) {
         //token过期了，重新登录
         setIsModalOpen(true);
         setModalContent("Please Login first!");
         return;
       }
-      var currentUser = dummy_user.find((a) => a.username === getToken());
-      setUser(currentUser);
+      setUser(result.data.data);
     }
     // 一直尝试获取当前登录用户，如果 token 过期，需重新登录
     getUser();
   }, []);
+  // useEffect(() => {
+  //   function getUser() {
+  //     if (getToken() === null) {
+  //       //token过期了，重新登录
+  //       setIsModalOpen(true);
+  //       setModalContent("Please Login first!");
+  //       return;
+  //     }
+  //     var currentUser = dummy_user.find((a) => a.username === getToken());
+  //     setUser(currentUser);
+  //   }
+  //   // 一直尝试获取当前登录用户，如果 token 过期，需重新登录
+  //   getUser();
+  // }, []);
 
   const handleCancel = () => {
     setIsModalOpen(false);

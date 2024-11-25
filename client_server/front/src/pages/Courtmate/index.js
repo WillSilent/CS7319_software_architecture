@@ -74,14 +74,14 @@ const Courtmate = () => {
     setFilteredMatches(currMatches);
   }, [filter, matches]);
 
-  // const getAllMatches = async () => {
-  //   const res = await http.get("/api/matches");
-  //   setMatches(res.data);
-  // };
+  const getAllMatches = async () => {
+    const res = await http.get("/api/matches");
+    setMatches(res.data);
+  };
 
   useEffect(() => {
-    // getAllMatches();
-    setMatches(dummy_match);
+    getAllMatches();
+    //setMatches(dummy_match);
   }, []);
 
   const handleBack = () => {

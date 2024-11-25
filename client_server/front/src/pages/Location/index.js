@@ -160,7 +160,7 @@ const Locations = () => {
           <div className="map-container">
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyAxZU2Dc2ePb2sJz8fwSArjwyeTPs1vZA8",
+                key: "AIzaSyDjEBIf3BDJlRHfktyRaWLkgt6q7zcufRs",
                 language: "en",
                 libraries: ["places"],
               }}

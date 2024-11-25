@@ -7,7 +7,7 @@ import com.heybadminton.pojo.UserVO;
 
 public interface UserService {
 
-     ResponseResult findUserInfoByToken(String token);
+    ResponseResult findUserInfoByToken(String token);
 
     String getTokenByUsername(String username, String password, int isRemembered);
 

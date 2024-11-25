@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heybadminton.dao.CommentMapper">
+
+    <select id="getById" parameterType="java.lang.Long" resultType="com.heybadminton.entity.Comment">
+        SELECT id, post_id as postId, comment_user_id as commentUserId, content, create_time as createTime, is_delete as
+        isDelete, post_user_profile as postUserProfile
+        FROM comment
+        WHERE id = #{id};
+    </select>
+
+    <select id="getByPostId" parameterType="java.lang.Long" resultType="com.heybadminton.entity.Comment">
+        SELECT id, post_id as postId, comment_user_id as commentUserId, content, create_time as createTime, is_delete as
+        isDelete, post_user_profile as postUserProfile
+        FROM comment
+        WHERE post_id = #{postId};
+    </select>
+
+    <select id="getByCommentUserId" parameterType="java.lang.Long" resultType="com.heybadminton.entity.Comment">
+        SELECT id, post_id as postId, comment_user_id as commentUserId, content, create_time as createTime, is_delete as
+        isDelete, post_user_profile as postUserProfile
+        FROM comment
+        WHERE comment_user_id = #{commentUserId};
+    </select>
+
+    <select id="getAll" resultType="com.heybadminton.entity.Comment">
+        SELECT id, post_id as postId, comment_user_id as commentUserId, content, create_time as createTime, is_delete as
+        isDelete, post_user_profile as postUserProfile
+        FROM comment;
+    </select>
+
+    <insert id="insert" parameterType="com.heybadminton.entity.Comment">
+        INSERT INTO comment (post_id, comment_user_id, content, create_time, is_delete, post_user_profile)
+        VALUES (#{postId}, #{commentUserId}, #{content}, #{createTime}, #{isDelete}, #{postUserProfile});
+    </insert>
+
+    <update id="update" parameterType="com.heybadminton.entity.Comment">
+        UPDATE comment
+        SET post_id = #{postId}, comment_user_id = #{commentUserId}, content = #{content}, create_time = #{createTime},
+        is_delete = #{isDelete}, post_user_profile = #{postUserProfile}
+        WHERE id = #{id};
+    </update>
+
+    <update id="delete" parameterType="java.lang.Long">
+        UPDATE comment
+        SET is_delete = true
+        WHERE id = #{id}
+    </update>
+
+</mapper>

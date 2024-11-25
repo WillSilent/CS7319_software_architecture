@@ -38,13 +38,13 @@ function Equipment() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // async function getAll() {
-    //   const result = await http.get("/equipments/getAll");
-    //   //console.log(result.data.data)
-    //   setData(result.data.data);
-    // }
-    // getAll();
-    setData(dummy_equipment);
+    async function getAll() {
+      const result = await http.get("/equipments/getAll");
+      //console.log(result.data.data)
+      setData(result.data.data);
+    }
+    getAll();
+    //setData(dummy_equipment);
   }, []);
 
   const pageSize = 10;

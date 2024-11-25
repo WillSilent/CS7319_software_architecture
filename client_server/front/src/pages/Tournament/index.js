@@ -9,12 +9,12 @@ const Tournament = () => {
   const [tounaments, setAllTournaments] = useState([]);
 
   useEffect(() => {
-    // async function getAll () {
-    //   const result = await http.get("/tournament/getAll")
-    //   setAllTournaments(result.data.data)
-    // }
-    // getAll()
-    setAllTournaments(dummy_tornament);
+    async function getAll () {
+      const result = await http.get("/tournament/getAll")
+      setAllTournaments(result.data.data)
+    }
+    getAll()
+    //setAllTournaments(dummy_tornament);
   }, []);
 
   // console.log(tounaments)

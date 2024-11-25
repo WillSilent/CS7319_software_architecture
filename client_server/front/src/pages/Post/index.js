@@ -21,26 +21,26 @@ const Post = () => {
   const [comments, setComments] = useState();
   const [commentText, setCommentText] = useState("");
 
-  // const getPostDetail = async () => {
-  //   const res = await http.get(`/equipments/${id}`);
-  //   setPost(res.data);
-  // };
+  const getPostDetail = async () => {
+    const res = await http.get(`/equipments/${id}`);
+    setPost(res.data);
+  };
 
-  // const getAllComments = async () => {
-  //   const res = await http.get(`/api/comments/post/${id}`);
-  //   setComments(res.data);
-  // };
+  const getAllComments = async () => {
+    const res = await http.get(`/api/comments/post/${id}`);
+    setComments(res.data);
+  };
 
   useEffect(() => {
-    // // Fetch the post data from backend API
-    // getPostDetail();
+    // Fetch the post data from backend API
+    getPostDetail();
 
-    // // Fetch the comments for this post from backend API
-    // getAllComments();
+    // Fetch the comments for this post from backend API
+    getAllComments();
 
-    setPost(dummy_equipment[id]);
-    dummy_comment = dummy_comment.filter((a) => a.postId == id);
-    setComments(dummy_comment);
+    //setPost(dummy_equipment[id]);
+    //dummy_comment = dummy_comment.filter((a) => a.postId == id);
+    //setComments(dummy_comment);
   }, [id]);
 
   const handleCommentSubmit = async () => {

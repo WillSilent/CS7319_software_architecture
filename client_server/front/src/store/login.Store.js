@@ -9,32 +9,32 @@ class LoginStore {
     makeAutoObservable(this);
   }
   // 登录
-  // login = async ({ username, password, remember }) => {
-  //   const res = await http.post(
-  //     "/auth/login",
-  //     {
-  //       username: username,
-  //       password: password,
-  //       isRemembered: remember ? 1 : 0,
-  //     },
-  //     { headers: { "content-type": "multipart/form-data" } }
-  //   );
-  //   this.token = res.data.data;
-  //   // 还有这里哦！！
-  //   setToken(res.data.data);
-  // };
   login = async ({ username, password, remember }) => {
-    // 遍历 dummy_user 查看是否匹配
-    const matchedUser = dummy_user.find(
-      (user) => user.username === username && user.password === password
+    const res = await http.post(
+      "/auth/login",
+      {
+        username: username,
+        password: password,
+        isRemembered: remember ? 1 : 0,
+      },
+      { headers: { "content-type": "multipart/form-data" } }
     );
-
-    if (matchedUser) {
-      setToken(username);
-    } else {
-      throw new Error("Incorrect username or password");
-    }
+    this.token = res.data.data;
+    // 还有这里哦！！
+    setToken(res.data.data);
   };
+  // login = async ({ username, password, remember }) => {
+  //   // 遍历 dummy_user 查看是否匹配
+  //   const matchedUser = dummy_user.find(
+  //     (user) => user.username === username && user.password === password
+  //   );
+
+  //   if (matchedUser) {
+  //     setToken(username);
+  //   } else {
+  //     throw new Error("Incorrect username or password");
+  //   }
+  // };
 
   getUserInfo = async () => {
     const res = await http.get("/auth/getUserInfo", {

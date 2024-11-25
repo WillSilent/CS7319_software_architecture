@@ -17,28 +17,28 @@ const HomePage = () => {
   const [courtmates, setCourtmates] = useState([]);
 
   useEffect(() => {
-    // async function getCarouselImages() {
-    //   const result = await homeStore.carouselImages();
-    //   setCarouselImages(result.data);
-    // }
-    // getCarouselImages();
-    setCarouselImages(dummy_tornament);
+    async function getCarouselImages() {
+      const result = await homeStore.carouselImages();
+      setCarouselImages(result.data);
+    }
+    getCarouselImages();
+    //setCarouselImages(dummy_tornament);
   }, []);
   useEffect(() => {
-    // async function getEquipments() {
-    //   const result = await homeStore.equipments();
-    //   setEquipments(result.data);
-    // }
-    // getEquipments();
-    setEquipments(dummy_equipment);
+    async function getEquipments() {
+      const result = await homeStore.equipments();
+      setEquipments(result.data);
+    }
+    getEquipments();
+    //setEquipments(dummy_equipment);
   }, []);
   useEffect(() => {
-    // async function getCourtmates() {
-    //   const result = await homeStore.courmates();
-    //   setCourtmates(result.data);
-    // }
-    // getCourtmates();
-    setCourtmates(dummy_match);
+    async function getCourtmates() {
+      const result = await homeStore.courmates();
+      setCourtmates(result.data);
+    }
+    getCourtmates();
+    //setCourtmates(dummy_match);
   }, []);
 
   const CourtmateList = ({ courtmates }) => (

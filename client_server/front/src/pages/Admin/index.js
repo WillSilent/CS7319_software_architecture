@@ -20,21 +20,21 @@ function Admin() {
   const [matchToDelete, setMatchToDelete] = useState(null);
   const [currentTab, setCurrentTab] = useState("posts");
 
-  // const getAllPosts = async () => {
-  //   const result = await http.get("/equipments/getAll");
-  //   setPosts(result.data.data);
-  // };
+  const getAllPosts = async () => {
+    const result = await http.get("/equipments/getAll");
+    setPosts(result.data.data);
+  };
 
-  // const getAllMatches = async () => {
-  //   const res = await http.get("/api/matches");
-  //   setMatches(res.data);
-  // };
+  const getAllMatches = async () => {
+    const res = await http.get("/api/matches");
+    setMatches(res.data);
+  };
 
   useEffect(() => {
-    // getAllPosts();
-    // getAllMatches();
-    setPosts(dummy_equipment);
-    setMatches(dummy_match);
+    getAllPosts();
+    getAllMatches();
+    //setPosts(dummy_equipment);
+    //setMatches(dummy_match);
   }, []);
 
   const handlePostDeleteClick = (post) => {

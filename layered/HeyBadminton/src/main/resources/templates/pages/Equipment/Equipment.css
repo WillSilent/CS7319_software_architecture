@@ -1,0 +1,27 @@
+.equipment-wrapper {
+  padding: 0px 50px;
+  width: 70%;
+  margin: auto;
+}
+
+#comment-area {
+  position: relative;
+  z-index: 1;
+}
+
+#comment-area:disabled {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+  pointer-events: all;
+}
+
+#comment-area:disabled::before {
+  content: '请先登录';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+}

@@ -1,0 +1,19 @@
+.tournament-wrapper {
+  width: 70%;
+  margin: auto;
+}
+
+.tournament-card {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.tournament-card .tournament-pic {
+  margin-left: 24px;
+  width: 200px;
+}
+
+.tournament-card-head-title {
+  font-weight: bold;
+}
