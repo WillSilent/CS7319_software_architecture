@@ -1,0 +1,36 @@
+body {
+  background: #f2f5f7;
+  font-family: microsoft yahei;
+  position: relative;
+  min-height: 100vh;
+}
+
+body,
+ul,
+ol,
+li,
+dl,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+.pr,
+.pc {
+  margin: 0;
+  padding: 0;
+}
+
+ul li,
+.xl li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

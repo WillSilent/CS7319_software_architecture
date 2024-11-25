@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.heybadminton.dao.EquipmentMapper">
+    <resultMap id="equipResultMap" type="com.heybadminton.entity.Equipment">
+        <id column="id" property="id"/>
+        <result column="post_user_id" property="postUserId"/>
+        <result column="avatar_url" property="avatarUrl"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="pictures_urls" property="picturesUrls"/>
+        <result column="is_delete" property="isDelete"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="getAllEquipment" resultMap="equipResultMap">
+        SELECT * FROM equipment order by create_time
+    </select>
+
+    <select id="getAllEquipmentByPage" resultMap="equipResultMap">
+        SELECT * FROM equipment order by create_time LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="getNewestEquipmentPost" resultMap="equipResultMap">
+        SELECT * FROM equipment order by create_time limit 6;
+    </select>
+
+    <select id="getEquipmentById" parameterType="java.lang.Long" resultMap="equipResultMap">
+        SELECT * FROM equipment WHERE id = #{id}
+    </select>
+
+    <insert id="insertEquipment" parameterType="com.heybadminton.entity.Equipment">
+        INSERT INTO equipment (id, avatar_url, post_user_id, title, content, pictures_urls, is_delete, create_time, update_time)
+        VALUES (#{id}, #{avatarUrl}, #{postUserId}, #{title}, #{content}, #{picturesUrls}, #{isDelete}, #{createTime, jdbcType=TIMESTAMP}, #{updateTime, jdbcType=TIMESTAMP})
+    </insert>
+
+    <update id="updateEquipment" parameterType="com.heybadminton.entity.Equipment">
+        UPDATE equipment SET post_user_id = #{post_user_id}, title = #{title}, content = #{content},
+        pictures_urls = #{pictures_urls}, is_delete = #{is_delete}, update_time = #{update_time} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteEquipmentById" parameterType="java.lang.Long">
+        UPDATE equipment SET is_delete = true WHERE id = #{id}
+    </delete>
+
+</mapper>

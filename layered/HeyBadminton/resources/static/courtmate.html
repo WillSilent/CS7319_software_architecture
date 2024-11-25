@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="logo.png" alt="Hey Badminton Logo" class="logo">
+        <nav>
+            <a href="#">Tournament</a>
+            <a href="#">Post</a>
+            <a href="#">Courtmate</a>
+            <a href="#">Court Locations</a>
+        </nav>
+        <input type="text" placeholder="input search text" class="search-bar">
+        <button class="search-button">🔍</button>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <h2>Filters</h2>
+            <label for="date">Date</label>
+            <input type="date" id="date">
+            
+            <label for="time">Time</label>
+            <select id="time">
+                <option>All</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
+
+            <label for="location">Location</label>
+            <select id="location">
+                <option>All</option>
+                <option>Boston</option>
+                <option>Atlanta</option>
+            </select>
+
+            <label for="players">Number of players</label>
+            <select id="players">
+                <option>All</option>
+                <option>1-5</option>
+                <option>6-10</option>
+            </select>
+
+            <label for="status">Status</label>
+            <select id="status">
+                <option>All</option>
+                <option>Open</option>
+                <option>Closed</option>
+            </select>
+
+            <button class="reset-button">Reset</button>
+            <p>Can't find a suitable match? Create one!</p>
+            <button class="create-button">Create</button>
+        </div>
+
+        <div class="events">
+            <div class="event-card">
+                <h3>Amateur Badminton Tournament</h3>
+                <p><strong>Date:</strong> 2023-04-21</p>
+                <p><strong>Time:</strong> 10:00am</p>
+                <p><strong>Location:</strong> Boston Badminton, Westborough, MA</p>
+                <p><strong>Participants:</strong> 14</p>
+                <p><strong>Note:</strong> Join us for our first amateur tournament. Put your skills to the test!</p>
+                <button class="join-button">Join</button>
+            </div>
+
+            <div class="event-card">
+                <h3>Weekend Badminton Social</h3>
+                <p><strong>Date:</strong> 2023-05-13</p>
+                <p><strong>Time:</strong> 1:00pm</p>
+                <p><strong>Location:</strong> Atlanta Badminton Club, Norcross, GA</p>
+                <p><strong>Participants:</strong> 8</p>
+                <p><strong>Note:</strong> Join us for a fun doubles match with snacks and refreshments!</p>
+                <button class="join-button">Join</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

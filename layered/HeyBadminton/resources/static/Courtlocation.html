@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Badminton Courts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="breadcrumb">
+        <a href="#">Home</a> / <span>Location</span>
+    </header>
+
+    <main class="container">
+        <h1>Find Nearby Badminton Courts</h1>
+
+        <div class="search-section">
+            <input type="text" placeholder="Zip" class="zip-input">
+            <select class="distance-select">
+                <option>Within 1 mile</option>
+                <option>Within 5 miles</option>
+                <option>Within 10 miles</option>
+            </select>
+            <button class="search-button">Search</button>
+        </div>
+
+        <div class="map-error">
+            <span class="error-icon">⚠️</span>
+            <p>Oops! Something went wrong.</p>
+            <small>This page didn't load Google Maps correctly.</small>
+        </div>
+
+        <div class="court-list">
+            <div class="court-item">
+                <h3>18th Street Tennis Courts</h3>
+                <p>2179 18th St NW #2159, Washington, DC 20009, United States</p>
+                <div class="stars">★★★★☆</div>
+            </div>
+
+            <div class="court-item">
+                <h3>Royal Badminton Academy</h3>
+                <p>21598 Atlantic Blvd Suite # 100, Sterling, VA 20166, United States</p>
+                <div class="stars">★★★★½</div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

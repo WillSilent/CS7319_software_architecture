@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10c9dc14.css",
+    "main.js": "/static/js/main.d3aff04c.js",
+    "static/media/badminton.jpg": "/static/media/badminton.c59959a96a6c288e77d8.jpg",
+    "static/media/profile.png": "/static/media/profile.1b4e61c6c4c1cb2d12ff.png",
+    "static/media/logo.png": "/static/media/logo.55e2fe69d415aff028bb.png",
+    "index.html": "/index.html",
+    "main.10c9dc14.css.map": "/static/css/main.10c9dc14.css.map",
+    "main.d3aff04c.js.map": "/static/js/main.d3aff04c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10c9dc14.css",
+    "static/js/main.d3aff04c.js"
+  ]
+}
