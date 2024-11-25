@@ -29,7 +29,7 @@ Although we have two architectures, we use similar implementation tech.
 
 #### 4. Option1 - Layered Layer Architecture
 
-![Snipaste_2024-11-25_12-49-18](\images\Snipaste_2024-11-25_12-49-18.png)
+![Snipaste_2024-11-25_12-49-18](./images/Snipaste_2024-11-25_12-49-18.png)
 
 - Evaluation:
   - Pros
